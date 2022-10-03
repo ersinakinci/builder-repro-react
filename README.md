@@ -53,7 +53,7 @@ If you see this error or a similar one, keep executing the clone command until y
 Your new space "My repro space" public API Key: xxxxxxx
 ```
 
-4. Add your new Builder space's public key to `NEXT_PUBLIC_BUILDER_API_KEY` in `.env`. Note: `.env` will be checked into source control, so [don't store any secrets there](https://nextjs.org/docs/basic-features/environment-variables).
+4. Add your new Builder space's public key to `NEXT_PUBLIC_BUILDER_API_KEY` in `.env`. **NOTE**: `.env` will be checked into source control, so [don't store any secrets there](https://nextjs.org/docs/basic-features/environment-variables).
 5. Create a private key for your new Builder space for dynamic preview URLs (see below). **NOTE**: this private key is not the same as your organization's private key which you used to clone the Builder content into your new space.
 6. For any models using `/__builder__/preview` or `/__builder__/preview-ssr` as a preview URL path (`project-template` and `symbol`), set up a dynamic preview URL with the following code. Replace `YOUR_PRIVATE_KEY`, `YOUR_BASE_URL`, and `YOUR_PATH` with the appropriate values from Builder and your development server:
 
