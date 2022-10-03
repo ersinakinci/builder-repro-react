@@ -68,7 +68,12 @@ Once you've successfully created your new space, manually delete any partially-p
 // NOTE: private write API key for your space, not your organization
 const privateKey = YOUR_PRIVATE_SPACE_KEY;
 const baseUrl = YOUR_BASE_URL;
-// "/__builder__/preview" or "/__builder__/preview-ssr", depending on what you want to repro
+// "/__builder__/preview" or "/__builder__/preview-ssr", depending on what you want to repro:
+//   - "/__builder__/preview" is a good base case that will render your section in the browser only.
+//   - "/__builder__/preview-ssr" will render your section during SSR and hydrate in the browser,
+//     which will bring out any issues related to SSR and hydration but may result in false positives.
+//     For example, if your section is only meant to render with state populated from some logic in
+//     a page template, you may get unexpected hydration errors.
 const path = YOUR_PATH;
 
 // This admin API query fetches the model name for a given model ID.
@@ -86,6 +91,7 @@ const res = await fetch("https://cdn.builder.io/api/v2/admin", {
     })
 });
 const data = await res.json();
+// The content model name.
 const model = data.data.model.name;
 
 // The preview page will use the model name (and optionally the content
