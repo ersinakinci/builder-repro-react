@@ -1,11 +1,17 @@
 # Builder React SDK repro template
 
-This template is intended for quickly spinning reproduction cases for Builder React SDK bug reports.
+This template is intended for quickly spinning up reproduction cases when you encounter a bug or some unexpected behavior while working with [Builder](https://builder.io/) and their [React SDK](https://github.com/builderio/builder/tree/main/packages/react).
 
-The template has two parts:
+The idea is to use the template as a starting point and add modifications to demonstrate your specific bug. You can then share your modifications with Builder's team, the Builder community, or a BuildQuick expert to get help.
 
-- Next.js back end, ready to be deployed
+## Structure
+
+The template has everything you need for a semi-complex, realistic demo:
+
+- Next.js back end with pages and utility functions, ready to be deployed
 - Builder content (`/builder-space`), ready to be cloned into a new space within your Builder organization [using Builder's CLI tool](https://github.com/BuilderIO/builder/tree/main/packages/cli)
+
+For more details, see the _Project structure_ section below.
 
 ## Workflow
 
@@ -50,7 +56,7 @@ Your new space "My repro space" public API Key: xxxxxxx
 
 4. Add your new Builder space's public key to `NEXT_PUBLIC_BUILDER_API_KEY` in `.env`. Note: `.env` will be checked into source control, so [don't store any secrets there](https://nextjs.org/docs/basic-features/environment-variables).
 5. Create a private key for your new Builder space for dynamic preview URLs (see below). **NOTE**: this private key is not the same as your organization's private key which you used to clone the Builder content into your new space.
-6. For any models using `/__builder__/preview` or `/__builder__/preview-ssr` as a preview URL path, set up a dynamic preview URL with the following code. Replace `YOUR_PRIVATE_KEY`, `YOUR_BASE_URL`, and `YOUR_PATH` with the appropriate values from Builder and your development server:
+6. For any models using `/__builder__/preview` or `/__builder__/preview-ssr` as a preview URL path (`project-template` and `symbol`), set up a dynamic preview URL with the following code. Replace `YOUR_PRIVATE_KEY`, `YOUR_BASE_URL`, and `YOUR_PATH` with the appropriate values from Builder and your development server:
 
 ```javascript
 const privateKey = YOUR_PRIVATE_KEY;
@@ -74,8 +80,11 @@ const model = data.data.model.name;
 return `${baseUrl}${path}?model=${model}&id=${content.id}`;
 ```
 
-7. Start the dev server if it isn't already running: `npm run dev:debug`
-8. Visit the root URL on your dev server. If you see a home page with a header and footer, everything's good!
+7. For all other models, set the preview URL according to the _Space structure_ section below.
+8. Start the dev server if it isn't already running: `npm run dev:debug`
+9. Visit the root URL on your dev server. If you see a home page with a header and footer, everything's good!
+
+# Project structure
 
 ## Space structure
 
@@ -103,10 +112,13 @@ This project assumes a particular space structure, detailed below.
 
 ## Back end structure
 
-- `pages/[[...page]].tsx`: Catch-all route for all `page` model content items.
-- `pages/__builder__/preview.tsx`: Preview route for displaying a single content item in the Visual Editor. Intended for section models like `symbol`. Doesn't fetch content from the content API, all rendering happens client-side. Requires dynamic preview URL setup within Builder (see below).
-- `pages/__builder__/preview-ssr.tsx`: Same as above, but also fetches content item data from Builder before rendering. Requires dynamic preview URL setup within Builder (see below).
-- `pages/projects/[project].tsx`: Route for all `project` model content items. Renders content using `project-template`.
+- `pages`
+  - `[[...page]].tsx`: Catch-all route for all `page` model content items.
+  - `__builder__`
+    - `preview.tsx`: Preview route for displaying a single content item in the Visual Editor. Intended for section models like `symbol`. Doesn't fetch content from the content API, all rendering happens client-side. Requires dynamic preview URL setup within Builder (see below).
+    - `preview-ssr.tsx`: Same as above, but also fetches content item data from Builder before rendering. Requires dynamic preview URL setup within Builder (see below).
+  - `projects`
+    - `[project].tsx`: Route for all `project` model content items. Renders content using `project-template`.
 
 # Need Expert help with Builder?
 
