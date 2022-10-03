@@ -6,6 +6,7 @@ import {
 import { getBuilderModelPaths } from '../../lib/get-builder-model-paths';
 import { NextSeo } from 'next-seo';
 import { Layout } from '../../components/Layout';
+import { useRouter } from 'next/router';
 
 export async function getStaticProps({ params }: { params: any }) {
   const urlPath = `/projects/${params?.project}`;
@@ -42,6 +43,12 @@ export default function Page({
     projectTemplate: any;
   };
 }) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <h1>Loading...</h1>;
+  }
+
   const { project, projectTemplate } = builderContent;
 
   return (

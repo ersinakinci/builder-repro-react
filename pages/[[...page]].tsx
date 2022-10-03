@@ -38,7 +38,7 @@ export async function getStaticPaths() {
 }
 
 export default function Page({
-  builderContent: { page },
+  builderContent,
 }: {
   builderContent: CommonBuilderContentProps & { page: any };
 }) {
@@ -47,6 +47,8 @@ export default function Page({
   if (router.isFallback) {
     return <h1>Loading...</h1>;
   }
+
+  const { page } = builderContent;
 
   return (
     <>
