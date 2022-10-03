@@ -4,36 +4,6 @@ This template is intended for quickly spinning up a back end when creating repro
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/nextjs-cmpuwo)
 
-## Space structure
-
-This project assumes a particular space structure, detailed below.
-
-- Page models
-  - `page`: Default page model
-    - Preview URL: `${YOUR_DEV_URL}`
-- Section models
-  - `header`
-    - Preview URL: `${YOUR_DEV_URL}`
-  - `footer`
-    - Preview URL: `${YOUR_DEV_URL}`
-  - `project-template`: Templates for displaying content items from the `project` data model
-    - Preview URL: Dynamic preview URL configured to point to `/__builder__/preview` or `/__builder__/preview-ssr` (see below)
-  - `symbol`
-    - Preview URL: Dynamic preview URL configured to point to `/__builder__/preview` or `/__builder__/preview-ssr` (see below)
-- Data models
-  - `project`
-    - Preview URL: `${YOUR_DEV_URL}/projects`
-    - Fields
-      - `title` (`string`)
-      - `description` (`string`)
-      - `urlPath` (`url`)
-
-## Project structure
-
-- `pages/[[...page]].tsx`: Catch-all route for all `page` model content items.
-- `pages/__builder__/preview.tsx`: Preview route for displaying a single content item in the Visual Editor. Intended for section models like `symbol`. Doesn't fetch content from the content API, all rendering happens client-side. Requires dynamic preview URL setup within Builder (see below).
-- `pages/__builder__/preview-ssr.tsx`: Same as above, but also fetches content item data from Builder before rendering. Requires dynamic preview URL setup within Builder (see below).
-
 ## Requirements
 
 - A Builder account
@@ -73,6 +43,40 @@ const model = data.data.model.name;
 
 return `${baseUrl}${path}?model=${model}&id=${content.id}`;
 ```
+
+5. Start the dev server if it isn't already running: `npm run dev:debug`
+6. Visit the root URL on your dev server. If you see a home page with a header and footer, everything's good!
+
+## Space structure
+
+This project assumes a particular space structure, detailed below.
+
+- Page models
+  - `page`: Default page model
+    - Preview URL: `${YOUR_DEV_URL}`
+- Section models
+  - `header`
+    - Preview URL: `${YOUR_DEV_URL}`
+  - `footer`
+    - Preview URL: `${YOUR_DEV_URL}`
+  - `project-template`: Templates for displaying content items from the `project` data model
+    - Preview URL: Dynamic preview URL configured to point to `/__builder__/preview` or `/__builder__/preview-ssr` (see below)
+  - `symbol`
+    - Preview URL: Dynamic preview URL configured to point to `/__builder__/preview` or `/__builder__/preview-ssr` (see below)
+- Data models
+  - `project`
+    - Preview URL: `${YOUR_DEV_URL}/projects`
+    - Fields
+      - `title` (`string`)
+      - `description` (`string`)
+      - `urlPath` (`url`)
+
+## Back end structure
+
+- `pages/[[...page]].tsx`: Catch-all route for all `page` model content items.
+- `pages/__builder__/preview.tsx`: Preview route for displaying a single content item in the Visual Editor. Intended for section models like `symbol`. Doesn't fetch content from the content API, all rendering happens client-side. Requires dynamic preview URL setup within Builder (see below).
+- `pages/__builder__/preview-ssr.tsx`: Same as above, but also fetches content item data from Builder before rendering. Requires dynamic preview URL setup within Builder (see below).
+- `pages/projects/[project].tsx`: Route for all `project` model content items. Renders content using `project-template`.
 
 # Need Expert help with Builder?
 
