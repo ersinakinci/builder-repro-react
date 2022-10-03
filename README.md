@@ -3,6 +3,7 @@
 This template is intended for quickly spinning reproduction cases for Builder React SDK bug reports.
 
 The template has two parts:
+
 - Next.js back end, ready to be deployed
 - Builder content (`/builder-space`), ready to be cloned into a new space within your Builder organization [using Builder's CLI tool](https://github.com/BuilderIO/builder/tree/main/packages/cli)
 
@@ -26,7 +27,9 @@ The template has two parts:
 
 ## Detailed setup instructions
 
-1. Clone the template's Builder space into a new space within your Builder organization using [Builder's CLI tool](https://github.com/BuilderIO/builder/tree/main/packages/cli):
+1. Clone this repo into your development environment. I recommend [forking on StackBlitz](https://stackblitz.com/edit/nextjs-cmpuwo), which will give you a development environment along with all the code from this repo.
+2. Prepare your development environment: `npm install`
+3. Clone the template's Builder space into a new space within your Builder organization using [Builder's CLI tool](https://github.com/BuilderIO/builder/tree/main/packages/cli):
 
 ```
 npm install -g @builder.io/cli
@@ -45,10 +48,9 @@ If you see this error or a similar one, keep executing the clone command until y
 Your new space "My repro space" public API Key: xxxxxxx
 ```
 
-2. Add your Builder space's public key to `NEXT_PUBLIC_BUILDER_API_KEY` in `.env`. Note: `.env` will be checked into source control, so [don't store any secrets there](https://nextjs.org/docs/basic-features/environment-variables).
-3. Deploy your back end, or simply run it on your dev environment using `npm install && npm run dev:debug`.
-4. Create a private key within Builder for dynamic preview URLs (see below).
-5. For any models using `/__builder__/preview` or `/__builder__/preview-ssr` as a preview URL path, set up a dynamic preview URL with the following code. Replace `YOUR_PRIVATE_KEY`, `YOUR_BASE_URL`, and `YOUR_PATH` with the appropriate values from Builder and your development server:
+4. Add your Builder space's public key to `NEXT_PUBLIC_BUILDER_API_KEY` in `.env`. Note: `.env` will be checked into source control, so [don't store any secrets there](https://nextjs.org/docs/basic-features/environment-variables).
+5. Create a private key within Builder for dynamic preview URLs (see below).
+6. For any models using `/__builder__/preview` or `/__builder__/preview-ssr` as a preview URL path, set up a dynamic preview URL with the following code. Replace `YOUR_PRIVATE_KEY`, `YOUR_BASE_URL`, and `YOUR_PATH` with the appropriate values from Builder and your development server:
 
 ```javascript
 const privateKey = YOUR_PRIVATE_KEY;
@@ -72,8 +74,8 @@ const model = data.data.model.name;
 return `${baseUrl}${path}?model=${model}&id=${content.id}`;
 ```
 
-6. Start the dev server if it isn't already running: `npm run dev:debug`
-7. Visit the root URL on your dev server. If you see a home page with a header and footer, everything's good!
+7. Start the dev server if it isn't already running: `npm run dev:debug`
+8. Visit the root URL on your dev server. If you see a home page with a header and footer, everything's good!
 
 ## Space structure
 
