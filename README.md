@@ -1,15 +1,30 @@
 # Builder React SDK repro template
 
-This template is intended for quickly spinning up a back end when creating reproduction cases for Builder React SDK bug reports.
+This template is intended for quickly spinning reproduction cases for Builder React SDK bug reports.
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/nextjs-cmpuwo)
+The template has two parts:
+- Next.js back end, ready to be deployed
+- Builder content (`/builder-space`), ready to be cloned into a new space within your Builder organization [using Builder's CLI tool](https://github.com/BuilderIO/builder/tree/main/packages/cli)
+
+## Workflow
+
+- Determine where you want to host your back end.
+  - The back end can be spun up on any server you like. I recommend [forking this project on StackBlitz](https://stackblitz.com/edit/nextjs-cmpuwo) and running it within the browser. That way, you can easily share modifications to your back end with Builder's team.
+- Deploy the back end.
+- Clone Builder content to a new space within your organization.
+- Make any modifications to the Builder content in your space and/or the back end to demonstrate your bug.
+- Share your repro case, including links to your back end and your space, with Builder's team.
+  - Anyone can [post a bug report on Builder's forums](https://forum.builder.io/c/bugs). Responses from Builder's team are viewable by the community and help improve the Builder experience for everyone!
+  - Current Builder customers can email support@builder.io.
+  - If you're a highly technical user who's certain that there's a bug in the SDK itself and you've thoroughly diagnosed the issue within the SDK's codebase, you can [file a bug report in Builder's open source repo](https://github.com/BuilderIO/builder/issues).
+  - Totally stumped by a hard problem? [Consider submitting the issue as a project request to BuildQuick](https://www.buildquick.dev/), Builder's official development partner.
 
 ## Requirements
 
 - A Builder account
 - A private key [for your Builder organization](https://www.builder.io/c/docs/managing-organizations#:~:text=Add%20or%20change%20your%20private%20key) (note: this isn't the same thing as your space's public key, nor a space's private write API key)
 
-## Setup
+## Detailed setup instructions
 
 1. Clone the template's Builder space into a new space within your Builder organization using [Builder's CLI tool](https://github.com/BuilderIO/builder/tree/main/packages/cli):
 
