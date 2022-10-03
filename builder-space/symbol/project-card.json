@@ -1,0 +1,527 @@
+{
+  "createdBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "createdDate": 1664819066843,
+  "data": {
+    "inputs": [
+      {
+        "@type": "@builder.io/core:Field",
+        "advanced": false,
+        "autoFocus": false,
+        "broadcast": false,
+        "bubble": false,
+        "copyOnAdd": true,
+        "defaultValue": "Default title",
+        "disallowRemove": false,
+        "helperText": "",
+        "hidden": false,
+        "hideFromFieldsEditor": false,
+        "hideFromUI": false,
+        "mandatory": false,
+        "model": "",
+        "name": "title",
+        "noPhotoPicker": false,
+        "onChange": "",
+        "permissionsRequiredToEdit": "",
+        "required": true,
+        "showIf": "",
+        "showTemplatePicker": true,
+        "simpleTextOnly": false,
+        "subFields": [],
+        "type": "text"
+      },
+      {
+        "@type": "@builder.io/core:Field",
+        "advanced": false,
+        "autoFocus": false,
+        "broadcast": false,
+        "bubble": false,
+        "copyOnAdd": true,
+        "defaultValue": "Default description",
+        "disallowRemove": false,
+        "helperText": "",
+        "hidden": false,
+        "hideFromFieldsEditor": false,
+        "hideFromUI": false,
+        "mandatory": false,
+        "model": "",
+        "name": "description",
+        "noPhotoPicker": false,
+        "onChange": "",
+        "permissionsRequiredToEdit": "",
+        "required": true,
+        "showIf": "",
+        "showTemplatePicker": true,
+        "simpleTextOnly": false,
+        "subFields": [],
+        "type": "text"
+      },
+      {
+        "@type": "@builder.io/core:Field",
+        "advanced": false,
+        "autoFocus": false,
+        "broadcast": false,
+        "bubble": false,
+        "copyOnAdd": true,
+        "defaultValue": "/projects/default-project",
+        "disallowRemove": false,
+        "helperText": "",
+        "hidden": false,
+        "hideFromFieldsEditor": false,
+        "hideFromUI": false,
+        "mandatory": false,
+        "model": "",
+        "name": "url",
+        "noPhotoPicker": false,
+        "onChange": "",
+        "permissionsRequiredToEdit": "",
+        "required": false,
+        "showIf": "",
+        "showTemplatePicker": true,
+        "simpleTextOnly": false,
+        "subFields": [],
+        "type": "url"
+      },
+      {
+        "@type": "@builder.io/core:Field",
+        "advanced": false,
+        "allowedFileTypes": [
+          "jpeg",
+          "png",
+          "svg"
+        ],
+        "autoFocus": false,
+        "broadcast": false,
+        "bubble": false,
+        "copyOnAdd": true,
+        "defaultValue": "https://via.placeholder.com/400x600.png?text=Project+card",
+        "disallowRemove": false,
+        "helperText": "",
+        "hidden": false,
+        "hideFromFieldsEditor": false,
+        "hideFromUI": false,
+        "mandatory": false,
+        "model": "",
+        "name": "image",
+        "noPhotoPicker": false,
+        "onChange": "",
+        "permissionsRequiredToEdit": "",
+        "required": true,
+        "showIf": "",
+        "showTemplatePicker": true,
+        "simpleTextOnly": false,
+        "subFields": [],
+        "type": "file"
+      },
+      {
+        "@type": "@builder.io/core:Field",
+        "advanced": false,
+        "autoFocus": false,
+        "broadcast": false,
+        "bubble": false,
+        "copyOnAdd": true,
+        "defaultValue": {
+          "@type": "@builder.io/core:Reference",
+          "id": "",
+          "model": ""
+        },
+        "disallowRemove": false,
+        "helperText": "",
+        "hidden": false,
+        "hideFromFieldsEditor": false,
+        "hideFromUI": false,
+        "mandatory": false,
+        "model": "",
+        "modelId": "37a3c8a6ba9a4b0a9e85a9d9a56318a9",
+        "name": "projectRef",
+        "noPhotoPicker": false,
+        "onChange": "",
+        "permissionsRequiredToEdit": "",
+        "required": false,
+        "showIf": "",
+        "showTemplatePicker": true,
+        "simpleTextOnly": false,
+        "subFields": [],
+        "type": "reference"
+      }
+    ],
+    "jsCode": "var __assign=function(){return(__assign=Object.assign||function(t){for(var e,n=1,r=arguments.length;n<r;n++)for(var o in e=arguments[n])Object.prototype.hasOwnProperty.call(e,o)&&(t[o]=e[o]);return t}).apply(this,arguments)},__awaiter=function(t,e,n,r){return new(n||(n=Promise))((function(o,a){function i(t){try{c(r.next(t))}catch(t){a(t)}}function u(t){try{c(r.throw(t))}catch(t){a(t)}}function c(t){var e;t.done?o(t.value):(e=t.value,e instanceof n?e:new n((function(t){t(e)}))).then(i,u)}c((r=r.apply(t,e||[])).next())}))},__generator=function(t,e){var n,r,o,a,i={label:0,sent:function(){if(1&o[0])throw o[1];return o[1]},trys:[],ops:[]};return a={next:u(0),throw:u(1),return:u(2)},\"function\"==typeof Symbol&&(a[Symbol.iterator]=function(){return this}),a;function u(a){return function(u){return function(a){if(n)throw new TypeError(\"Generator is already executing.\");for(;i;)try{if(n=1,r&&(o=2&a[0]?r.return:a[0]?r.throw||((o=r.return)&&o.call(r),0):r.next)&&!(o=o.call(r,a[1])).done)return o;switch(r=0,o&&(a=[2&a[0],o.value]),a[0]){case 0:case 1:o=a;break;case 4:return i.label++,{value:a[1],done:!1};case 5:i.label++,r=a[1],a=[0];continue;case 7:a=i.ops.pop(),i.trys.pop();continue;default:if(!(o=(o=i.trys).length>0&&o[o.length-1])&&(6===a[0]||2===a[0])){i=0;continue}if(3===a[0]&&(!o||a[1]>o[0]&&a[1]<o[3])){i.label=a[1];break}if(6===a[0]&&i.label<o[1]){i.label=o[1],o=a;break}if(o&&i.label<o[2]){i.label=o[2],i.ops.push(a);break}o[2]&&i.ops.pop(),i.trys.pop();continue}a=e.call(t,i)}catch(t){a=[6,t],r=0}finally{n=o=0}if(5&a[0])throw a[1];return{value:a[0]?a[1]:void 0,done:!0}}([a,u])}}};function main(){return __awaiter(this,void 0,void 0,(function(){return __generator(this,(function(t){if(Builder.isServer)try{state.contentApiRenderedState={foo:\"bar\",project:__assign({},state.project)}}catch(t){state.contentApiRenderedError=t.toString()}return Builder.isBrowser,[2]}))}))}var _virtual_index=main();return _virtual_index",
+    "blocks": [
+      {
+        "@type": "@builder.io/sdk:Element",
+        "@version": 2,
+        "actions": {
+          "mouseEnter": "var _virtual_index=state.isHovered=!0;return _virtual_index",
+          "mouseLeave": "var _virtual_index=state.isHovered=!1;return _virtual_index"
+        },
+        "bindings": {
+          "href": "var _virtual_index=state.url;return _virtual_index",
+          "style.background": "var _virtual_index=state.isHovered?\"antiquewhite\":\"#4A90E2\";return _virtual_index",
+          "style.color": "var _virtual_index=state.isHovered?\"black\":\"white\";return _virtual_index"
+        },
+        "code": {
+          "actions": {
+            "mouseEnter": "state.isHovered = true;\n",
+            "mouseLeave": "state.isHovered = false;\n"
+          },
+          "bindings": {
+            "href": "state.url",
+            "style.background": "state.isHovered ? \"antiquewhite\" : \"#4A90E2\"",
+            "style.color": "state.isHovered ? \"black\" : \"white\""
+          }
+        },
+        "layerName": "Container",
+        "id": "builder-0322f87c20ed4beebd7768cf21b42c11",
+        "meta": {
+          "eventActions": {
+            "mouseEnter": [
+              {
+                "@type": "@builder.io/core:Action",
+                "action": "@builder.io:customCode",
+                "options": {
+                  "code": "state.isHovered = true"
+                }
+              }
+            ],
+            "mouseLeave": [
+              {
+                "@type": "@builder.io/core:Action",
+                "action": "@builder.io:customCode",
+                "options": {
+                  "code": "state.isHovered = false"
+                }
+              }
+            ]
+          }
+        },
+        "children": [
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"Image (state.image): \".concat(state.image);return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`Image (state.image): ${state.image}`"
+              }
+            },
+            "layerName": "Image text",
+            "id": "builder-1d0c148513d9415aaf0e15dee36f5bf2",
+            "meta": {
+              "previousId": "builder-ff603cce29234d21b68a824a09a2870c"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "Enter some text..."
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "0px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.image": "var _virtual_index=state.image;return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.image": "state.image"
+              }
+            },
+            "id": "builder-56efc693be284ebcb643897989a46100",
+            "component": {
+              "name": "Image",
+              "options": {
+                "image": "https://cdn.builder.io/api/v1/image/assets%2Fpwgjf0RoYWbdnJSbpBAjXNRMe9F2%2Ffb27a7c790324294af8be1c35fe30f4d",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center",
+                "lazy": false,
+                "fitContent": true,
+                "aspectRatio": 0.7041,
+                "lockAspectRatio": false
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "width": "100%",
+                "minHeight": "20px",
+                "minWidth": "20px",
+                "overflow": "hidden",
+                "maxHeight": "200px"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"Title (state.title): \".concat(state.title);return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`Title (state.title): ${state.title}`"
+              }
+            },
+            "layerName": "Title",
+            "id": "builder-90897ee848e94908815f3d56a2a4b8b2",
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "Enter some text..."
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"Description (state.description): \".concat(state.description);return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`Description (state.description): ${state.description}`"
+              }
+            },
+            "layerName": "Description",
+            "id": "builder-ff603cce29234d21b68a824a09a2870c",
+            "meta": {
+              "previousId": "builder-90897ee848e94908815f3d56a2a4b8b2"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "Enter some text..."
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"URL (state.url): \".concat(state.url);return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`URL (state.url): ${state.url}`"
+              }
+            },
+            "layerName": "URL",
+            "id": "builder-d3665eb87a854238a5ba6c15a89fa83a",
+            "meta": {
+              "previousId": "builder-ff603cce29234d21b68a824a09a2870c"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "Enter some text..."
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"Project ref (state.projectRef): \".concat(JSON.stringify(state.projectRef));return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`Project ref (state.projectRef): ${JSON.stringify(state.projectRef)}`"
+              }
+            },
+            "layerName": "URL",
+            "id": "builder-da35a49d3e6e4dc189919900b6c3a4b4",
+            "meta": {
+              "previousId": "builder-d3665eb87a854238a5ba6c15a89fa83a"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "Enter some text..."
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"Content API-rendered state (state.contentApiRenderedState): \".concat(JSON.stringify(state.contentApiRenderedState));return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`Content API-rendered state (state.contentApiRenderedState): ${JSON.stringify(state.contentApiRenderedState)}`"
+              }
+            },
+            "layerName": "URL",
+            "id": "builder-01ea69429b4d44888520ebc9ad180b76",
+            "meta": {
+              "previousId": "builder-d3665eb87a854238a5ba6c15a89fa83a"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "Enter some text..."
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"Content API-rendered error (state.contentApiRenderedError): \".concat(state.contentApiRenderedError);return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`Content API-rendered error (state.contentApiRenderedError): ${state.contentApiRenderedError}`"
+              }
+            },
+            "layerName": "URL",
+            "id": "builder-930bb6fa83c04769a506f8fa4fa14166",
+            "meta": {
+              "previousId": "builder-01ea69429b4d44888520ebc9ad180b76"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "Enter some text..."
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          }
+        ],
+        "responsiveStyles": {
+          "large": {
+            "display": "flex",
+            "flexDirection": "column",
+            "position": "relative",
+            "flexShrink": "0",
+            "boxSizing": "border-box",
+            "marginTop": "0px",
+            "height": "auto",
+            "borderRadius": "20px",
+            "paddingTop": "30px",
+            "paddingLeft": "30px",
+            "paddingBottom": "30px",
+            "paddingRight": "30px",
+            "transition": "color 0.3s, background 0.3s"
+          }
+        }
+      }
+    ],
+    "state": {
+      "deviceSize": "large",
+      "location": {
+        "path": "",
+        "query": {}
+      }
+    }
+  },
+  "id": "4b42c6939a7048ccaa59379415a1c0ff",
+  "lastUpdatedBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "meta": {
+    "hasLinks": false,
+    "kind": "component",
+    "lastPreviewUrl": "https://preview.builder.codes?model=symbol&previewing=true&apiKey=825df0b059fe4a2587c53008d27a7ef9&builder.space=825df0b059fe4a2587c53008d27a7ef9&builder.cachebust=true&builder.preview=symbol&builder.noCache=true&__builder_editing__=true&builder.overrides.symbol=4f604457cc0f44ff8e5246d5dce6f786&builder.overrides.4f604457cc0f44ff8e5246d5dce6f786=4f604457cc0f44ff8e5246d5dce6f786",
+    "needsHydration": false
+  },
+  "modelId": "1496c2623682479fa1a7ad644423bb5c",
+  "name": "Project card",
+  "published": "published",
+  "query": [],
+  "testRatio": 1,
+  "variations": {},
+  "lastUpdated": 1664821229614,
+  "firstPublished": 1664819864135,
+  "rev": "a4u6jtj059",
+  "@originOrg": "825df0b059fe4a2587c53008d27a7ef9",
+  "@originContentId": "4f604457cc0f44ff8e5246d5dce6f786",
+  "@originModelId": "4c47ca555ebb4febb1141db95b4c4eed"
+}

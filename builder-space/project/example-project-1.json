@@ -1,0 +1,35 @@
+{
+  "createdBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "createdDate": 1664820643177,
+  "data": {
+    "description": "The first example project.",
+    "image": "https://cdn.builder.io/api/v1/image/assets%2F825df0b059fe4a2587c53008d27a7ef9%2Fe672345ab06d448db71fcc111ca4fd62",
+    "title": "Example project 1",
+    "url": "/projects/example-project-1"
+  },
+  "id": "74aa879b2c054ca5bff7b94c7ffecd13",
+  "lastUpdatedBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "meta": {
+    "kind": "data",
+    "lastPreviewUrl": ""
+  },
+  "modelId": "37a3c8a6ba9a4b0a9e85a9d9a56318a9",
+  "name": "Example project 1",
+  "published": "published",
+  "query": [
+    {
+      "@type": "@builder.io/core:Query",
+      "operator": "is",
+      "property": "urlPath",
+      "value": "/projects/example-project-1"
+    }
+  ],
+  "testRatio": 1,
+  "variations": {},
+  "lastUpdated": 1664820885747,
+  "firstPublished": 1664820701357,
+  "rev": "vyh25gvoym",
+  "@originOrg": "825df0b059fe4a2587c53008d27a7ef9",
+  "@originContentId": "b1ebe36a28d0493182bb06e0f7c1775c",
+  "@originModelId": "b594225b65bd44bf887fec35a56754f5"
+}

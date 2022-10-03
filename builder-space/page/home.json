@@ -1,0 +1,245 @@
+{
+  "createdBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "createdDate": 1664817005681,
+  "data": {
+    "themeId": false,
+    "title": "Home",
+    "blocks": [
+      {
+        "@type": "@builder.io/sdk:Element",
+        "@version": 2,
+        "id": "builder-babb4f85a6874147befea6b35dd65d4c",
+        "component": {
+          "name": "Core:Section",
+          "options": {
+            "maxWidth": 1200,
+            "lazyLoad": false
+          }
+        },
+        "children": [
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "id": "builder-e437d00986ce407d83fffa4624f65438",
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "<h1>Welcome to the home page! This is a text block.</h1>"
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto",
+                "textAlign": "center"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "id": "builder-fa7294eae86a4813b0d5729937d4f83c",
+            "children": [
+              {
+                "@type": "@builder.io/sdk:Element",
+                "@version": 2,
+                "id": "builder-d24fbe23a5a84b5397318dcaa577566e",
+                "meta": {
+                  "previousId": "builder-cfad2e253503458b86a8f6befcce80c5"
+                },
+                "component": {
+                  "name": "Image",
+                  "options": {
+                    "image": "https://cdn.builder.io/api/v1/image/assets%2F825df0b059fe4a2587c53008d27a7ef9%2F41013da07b9e4bbe80bcceb51252b8b3",
+                    "backgroundSize": "contain",
+                    "backgroundPosition": "center",
+                    "lazy": false,
+                    "fitContent": true,
+                    "aspectRatio": 1.499,
+                    "lockAspectRatio": false,
+                    "height": 1300,
+                    "width": 867
+                  }
+                },
+                "responsiveStyles": {
+                  "large": {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "position": "relative",
+                    "flexShrink": "0",
+                    "boxSizing": "border-box",
+                    "marginTop": "0px",
+                    "width": "100%",
+                    "minWidth": "20px",
+                    "overflow": "hidden",
+                    "height": "300px",
+                    "marginRight": "auto"
+                  }
+                }
+              },
+              {
+                "@type": "@builder.io/sdk:Element",
+                "@version": 2,
+                "id": "builder-e9d982de565a49f9a9b9626add03cca1",
+                "component": {
+                  "name": "Text",
+                  "options": {
+                    "text": "<h2><em style=\"font-size: 14px;\">Ceci n'est pas une pipe.</em></h2>"
+                  }
+                },
+                "responsiveStyles": {
+                  "large": {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "position": "relative",
+                    "flexShrink": "0",
+                    "boxSizing": "border-box",
+                    "marginTop": "0px",
+                    "lineHeight": "normal",
+                    "height": "auto"
+                  }
+                }
+              }
+            ],
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "justifyContent": "space-between",
+                "alignItems": "center"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"context.builderContent.data.title: \".concat(context.builderContent.data.title);return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`context.builderContent.data.title: ${context.builderContent.data.title}`"
+              }
+            },
+            "id": "builder-dc629c2410174848969b6edb911b0b90",
+            "meta": {
+              "previousId": "builder-4c6a65a0e1fd4b8081047a54b6ff865e"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "<p>This is an example about page.</p>"
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"context.builderContent.data.description: \".concat(context.builderContent.data.description);return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`context.builderContent.data.description: ${context.builderContent.data.description}`"
+              }
+            },
+            "id": "builder-80d487d648824c239025e7c3b7244ed3",
+            "meta": {
+              "previousId": "builder-99a6ca420e754ad59daee8b59387942e"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "<p>This is an example about page.</p>"
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          }
+        ],
+        "responsiveStyles": {
+          "large": {
+            "display": "flex",
+            "flexDirection": "column",
+            "position": "relative",
+            "flexShrink": "0",
+            "boxSizing": "border-box",
+            "marginTop": "0px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "paddingTop": "20px",
+            "paddingBottom": "20px",
+            "minHeight": "100px"
+          }
+        }
+      }
+    ],
+    "url": "/",
+    "state": {
+      "deviceSize": "large",
+      "location": {
+        "path": "",
+        "query": {}
+      }
+    }
+  },
+  "id": "5fc38cdb0d194aa7bd83c38f486e522f",
+  "lastUpdatedBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "meta": {
+    "hasLinks": false,
+    "kind": "page",
+    "lastPreviewUrl": "https://preview.builder.codes?model=page&previewing=true&apiKey=825df0b059fe4a2587c53008d27a7ef9&builder.space=825df0b059fe4a2587c53008d27a7ef9&builder.cachebust=true&builder.preview=page&builder.noCache=true&__builder_editing__=true&builder.overrides.page=658e41a2931045b196b553e791dd34e2&builder.overrides.658e41a2931045b196b553e791dd34e2=658e41a2931045b196b553e791dd34e2&builder.overrides.page:/=658e41a2931045b196b553e791dd34e2",
+    "needsHydration": false
+  },
+  "modelId": "fe2c429c07e6442eb4707da2a46253ee",
+  "name": "Home",
+  "published": "published",
+  "query": [
+    {
+      "@type": "@builder.io/core:Query",
+      "operator": "is",
+      "property": "urlPath",
+      "value": "/"
+    }
+  ],
+  "testRatio": 1,
+  "variations": {},
+  "lastUpdated": 1664817812991,
+  "firstPublished": 1664817268746,
+  "rev": "g00gdkijope",
+  "@originOrg": "825df0b059fe4a2587c53008d27a7ef9",
+  "@originContentId": "658e41a2931045b196b553e791dd34e2",
+  "@originModelId": "302baad465c4425fa6b50b2b5f8b00b2"
+}

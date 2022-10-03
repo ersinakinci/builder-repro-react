@@ -1,0 +1,28 @@
+{
+  "type": "space",
+  "name": "Repro template",
+  "loadPlugins": [],
+  "id": "825df0b059fe4a2587c53008d27a7ef9",
+  "@version": 6,
+  "cloneInfo": {
+    "contentIdMap": {
+      "a2b0fa5ebc15420eb4f406f5791eedd1": "46b9304aeb5e4d0ead83769f07b1bb0c",
+      "c905d32743ea40cca4db19ed9e43e961": "b7b4bbeb1a4e46fab739b7de7587ca17",
+      "bd565f60ab344ea29cc3d578868363f2": "23fb157e5d8c4046aacd5d70e21a2107",
+      "b1ebe36a28d0493182bb06e0f7c1775c": "74aa879b2c054ca5bff7b94c7ffecd13",
+      "859742694be04108bbf0633b9580392f": "f25cda3c9a0745f0994c6f252e500678",
+      "4f604457cc0f44ff8e5246d5dce6f786": "4b42c6939a7048ccaa59379415a1c0ff",
+      "2584e0feea0c49858a95d721d0d0ddae": "7a41f7a773e24e479ce54e1d43db4fbe",
+      "5f48999078d243c692bb3419a9c4992f": "87296c5225dc4a8f95b3493d01aa6fce",
+      "658e41a2931045b196b553e791dd34e2": "5fc38cdb0d194aa7bd83c38f486e522f"
+    },
+    "modelIdMap": {
+      "1cda682070924e6ba72c13784780c198": "9336578978444d49b787f136ef109466",
+      "4d746e8706f844818fec402152d74d64": "c2cc70df8f704ee99c5c3b0dabbe3004",
+      "b594225b65bd44bf887fec35a56754f5": "37a3c8a6ba9a4b0a9e85a9d9a56318a9",
+      "9f3defd75e844befbafc78801608c5e0": "6d15916c38f54b069d07e1bff541968d",
+      "4c47ca555ebb4febb1141db95b4c4eed": "1496c2623682479fa1a7ad644423bb5c",
+      "302baad465c4425fa6b50b2b5f8b00b2": "fe2c429c07e6442eb4707da2a46253ee"
+    }
+  }
+}

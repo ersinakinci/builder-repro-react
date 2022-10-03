@@ -1,0 +1,166 @@
+{
+  "createdBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "createdDate": 1664817670446,
+  "data": {
+    "inputs": [],
+    "themeId": false,
+    "title": "About",
+    "blocks": [
+      {
+        "@type": "@builder.io/sdk:Element",
+        "@version": 2,
+        "id": "builder-f2375c05358342bdb77c63ed2da721c7",
+        "component": {
+          "name": "Core:Section",
+          "options": {
+            "maxWidth": 1200,
+            "lazyLoad": false
+          }
+        },
+        "children": [
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "id": "builder-6ea6d25e32f94961bbfb37ee10b019b3",
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "<p>This is an example about page.</p>"
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"context.builderContent.data.title: \".concat(context.builderContent.data.title);return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`context.builderContent.data.title: ${context.builderContent.data.title}`"
+              }
+            },
+            "id": "builder-4c6a65a0e1fd4b8081047a54b6ff865e",
+            "meta": {
+              "previousId": "builder-6ea6d25e32f94961bbfb37ee10b019b3"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "<p>This is an example about page.</p>"
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          },
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.text": "var _virtual_index=\"context.builderContent.data.description: \".concat(context.builderContent.data.description);return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.text": "`context.builderContent.data.description: ${context.builderContent.data.description}`"
+              }
+            },
+            "id": "builder-99a6ca420e754ad59daee8b59387942e",
+            "meta": {
+              "previousId": "builder-4c6a65a0e1fd4b8081047a54b6ff865e"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "<p>This is an example about page.</p>"
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "20px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          }
+        ],
+        "responsiveStyles": {
+          "large": {
+            "display": "flex",
+            "flexDirection": "column",
+            "position": "relative",
+            "flexShrink": "0",
+            "boxSizing": "border-box",
+            "marginTop": "0px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "paddingTop": "20px",
+            "paddingBottom": "20px",
+            "minHeight": "100px"
+          }
+        }
+      }
+    ],
+    "url": "/about",
+    "state": {
+      "deviceSize": "large",
+      "location": {
+        "path": "",
+        "query": {}
+      }
+    }
+  },
+  "id": "87296c5225dc4a8f95b3493d01aa6fce",
+  "lastUpdatedBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "meta": {
+    "hasLinks": false,
+    "kind": "page",
+    "lastPreviewUrl": "https://preview.builder.codes?model=page&previewing=true&apiKey=825df0b059fe4a2587c53008d27a7ef9&builder.space=825df0b059fe4a2587c53008d27a7ef9&builder.cachebust=true&builder.preview=page&builder.noCache=true&__builder_editing__=true&builder.overrides.page=5f48999078d243c692bb3419a9c4992f&builder.overrides.5f48999078d243c692bb3419a9c4992f=5f48999078d243c692bb3419a9c4992f&builder.overrides.page:/=5f48999078d243c692bb3419a9c4992f",
+    "needsHydration": false
+  },
+  "modelId": "fe2c429c07e6442eb4707da2a46253ee",
+  "name": "About",
+  "published": "published",
+  "query": [
+    {
+      "@type": "@builder.io/core:Query",
+      "operator": "is",
+      "property": "urlPath",
+      "value": "/about"
+    }
+  ],
+  "testRatio": 1,
+  "variations": {},
+  "lastUpdated": 1664817781634,
+  "firstPublished": 1664817781632,
+  "rev": "g00gdkijope",
+  "@originOrg": "825df0b059fe4a2587c53008d27a7ef9",
+  "@originContentId": "5f48999078d243c692bb3419a9c4992f",
+  "@originModelId": "302baad465c4425fa6b50b2b5f8b00b2"
+}

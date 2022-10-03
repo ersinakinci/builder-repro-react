@@ -1,0 +1,83 @@
+{
+  "createdBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "createdDate": 1664817539964,
+  "data": {
+    "blocks": [
+      {
+        "@type": "@builder.io/sdk:Element",
+        "@version": 2,
+        "id": "builder-98ed1098d3c24ddcbe9a38e040bfd1b8",
+        "children": [
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "id": "builder-aa794b860ae54aaaad27701534598bc7",
+            "meta": {
+              "previousId": "builder-210e7fcd85544d86809bd0cf65c4546b"
+            },
+            "component": {
+              "name": "Text",
+              "options": {
+                "text": "<p>This is an example footer.</p>"
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "0px",
+                "lineHeight": "normal",
+                "height": "auto"
+              }
+            }
+          }
+        ],
+        "responsiveStyles": {
+          "large": {
+            "display": "flex",
+            "flexDirection": "column",
+            "position": "relative",
+            "flexShrink": "0",
+            "boxSizing": "border-box",
+            "marginTop": "0px",
+            "height": "150px",
+            "justifyContent": "center",
+            "alignItems": "center",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroundColor": "rgba(0, 0, 0, 1)"
+          }
+        }
+      }
+    ],
+    "state": {
+      "deviceSize": "large",
+      "location": {
+        "path": "",
+        "query": {}
+      }
+    }
+  },
+  "id": "46b9304aeb5e4d0ead83769f07b1bb0c",
+  "lastUpdatedBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "meta": {
+    "hasLinks": false,
+    "kind": "component",
+    "lastPreviewUrl": "https://preview.builder.codes?model=footer&previewing=true&apiKey=825df0b059fe4a2587c53008d27a7ef9&builder.space=825df0b059fe4a2587c53008d27a7ef9&builder.cachebust=true&builder.preview=footer&builder.noCache=true&__builder_editing__=true&builder.overrides.footer=a2b0fa5ebc15420eb4f406f5791eedd1&builder.overrides.a2b0fa5ebc15420eb4f406f5791eedd1=a2b0fa5ebc15420eb4f406f5791eedd1",
+    "needsHydration": false
+  },
+  "modelId": "9336578978444d49b787f136ef109466",
+  "name": "Default footer",
+  "published": "published",
+  "query": [],
+  "testRatio": 1,
+  "variations": {},
+  "lastUpdated": 1664817612411,
+  "firstPublished": 1664817612410,
+  "rev": "pq4ok4yf8j",
+  "@originOrg": "825df0b059fe4a2587c53008d27a7ef9",
+  "@originContentId": "a2b0fa5ebc15420eb4f406f5791eedd1",
+  "@originModelId": "1cda682070924e6ba72c13784780c198"
+}

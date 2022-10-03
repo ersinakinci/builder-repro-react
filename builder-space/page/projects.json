@@ -1,0 +1,144 @@
+{
+  "createdBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "createdDate": 1664820944380,
+  "data": {
+    "httpRequests": {
+      "project": "https://cdn.builder.io/api/v2/content/project?apiKey=825df0b059fe4a2587c53008d27a7ef9&includeRefs=true&fields=data&limit=10"
+    },
+    "inputs": [],
+    "themeId": false,
+    "title": "Projects",
+    "blocks": [
+      {
+        "@type": "@builder.io/sdk:Element",
+        "@version": 2,
+        "id": "builder-4aa03c9c39934ac880edd98d1fc9c20b",
+        "component": {
+          "name": "Core:Section",
+          "options": {
+            "maxWidth": 1200,
+            "lazyLoad": false
+          }
+        },
+        "children": [
+          {
+            "@type": "@builder.io/sdk:Element",
+            "@version": 2,
+            "bindings": {
+              "component.options.symbol.data.description": "var _virtual_index=state.resultsItem.data.description;return _virtual_index",
+              "component.options.symbol.data.title": "var _virtual_index=state.resultsItem.data.title;return _virtual_index",
+              "component.options.symbol.data.url": "var _virtual_index=state.resultsItem.data.url;return _virtual_index",
+              "component.options.symbol.data.image": "var _virtual_index=state.resultsItem.data.image;return _virtual_index"
+            },
+            "code": {
+              "bindings": {
+                "component.options.symbol.data.description": "state.resultsItem.data.description",
+                "component.options.symbol.data.title": "state.resultsItem.data.title",
+                "component.options.symbol.data.url": "state.resultsItem.data.url",
+                "component.options.symbol.data.image": "state.resultsItem.data.image"
+              }
+            },
+            "repeat": {
+              "collection": "state.project.results"
+            },
+            "id": "builder-19695b1dd44d4f38a07e470d86ea0b90",
+            "component": {
+              "name": "Symbol",
+              "options": {
+                "dataOnly": false,
+                "inheritState": false,
+                "renderToLiquid": false,
+                "symbol": {
+                  "model": "symbol",
+                  "entry": "4b42c6939a7048ccaa59379415a1c0ff",
+                  "data": {
+                    "title": "Default title",
+                    "description": "",
+                    "url": "/projects/default-project",
+                    "image": "https://via.placeholder.com/400x600.png?text=Project+card"
+                  }
+                }
+              }
+            },
+            "responsiveStyles": {
+              "large": {
+                "display": "flex",
+                "flexDirection": "column",
+                "position": "relative",
+                "flexShrink": "0",
+                "boxSizing": "border-box",
+                "marginTop": "0px",
+                "marginBottom": "20px"
+              }
+            }
+          }
+        ],
+        "responsiveStyles": {
+          "large": {
+            "display": "flex",
+            "flexDirection": "column",
+            "position": "relative",
+            "flexShrink": "0",
+            "boxSizing": "border-box",
+            "marginTop": "0px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "paddingTop": "20px",
+            "paddingBottom": "20px",
+            "minHeight": "100px"
+          }
+        }
+      }
+    ],
+    "url": "/projects",
+    "state": {
+      "deviceSize": "large",
+      "location": {
+        "path": "",
+        "query": {}
+      }
+    }
+  },
+  "id": "7a41f7a773e24e479ce54e1d43db4fbe",
+  "lastUpdatedBy": "7CR6nekYycX9cktjX9sWyiP655l2",
+  "meta": {
+    "dataSources": [
+      {
+        "dataPluginName": "Builder.io",
+        "options": {
+          "limit": 10,
+          "orderBy": "priority",
+          "orderType": "descending",
+          "query": [],
+          "single": false
+        },
+        "propertyName": "project",
+        "resourceId": "37a3c8a6ba9a4b0a9e85a9d9a56318a9",
+        "resourceName": "Project"
+      }
+    ],
+    "hasLinks": false,
+    "kind": "page",
+    "lastPreviewUrl": "https://preview.builder.codes?model=page&previewing=true&apiKey=825df0b059fe4a2587c53008d27a7ef9&builder.space=825df0b059fe4a2587c53008d27a7ef9&builder.cachebust=true&builder.preview=page&builder.noCache=true&__builder_editing__=true&builder.overrides.page=2584e0feea0c49858a95d721d0d0ddae&builder.overrides.2584e0feea0c49858a95d721d0d0ddae=2584e0feea0c49858a95d721d0d0ddae&builder.overrides.page:/=2584e0feea0c49858a95d721d0d0ddae",
+    "needsHydration": false
+  },
+  "modelId": "fe2c429c07e6442eb4707da2a46253ee",
+  "name": "Projects",
+  "published": "published",
+  "query": [
+    {
+      "@type": "@builder.io/core:Query",
+      "operator": "is",
+      "property": "urlPath",
+      "value": "/projects"
+    }
+  ],
+  "testRatio": 1,
+  "variations": {},
+  "lastUpdated": 1664821529295,
+  "firstPublished": 1664821135170,
+  "rev": "g00gdkijope",
+  "@originOrg": "825df0b059fe4a2587c53008d27a7ef9",
+  "@originContentId": "2584e0feea0c49858a95d721d0d0ddae",
+  "@originModelId": "302baad465c4425fa6b50b2b5f8b00b2"
+}
