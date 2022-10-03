@@ -30,7 +30,19 @@ The template has two parts:
 
 ```
 npm install -g @builder.io/cli
-builder create -k YOUR_BUILDER_ORG_PRIVATE_KEY -i ./builder-space -n "My repro space"
+builder create -k YOUR_BUILDER_ORG_PRIVATE_KEY -i ./builder-space -n "My repro space" -d
+```
+
+**NOTE**: Builder's CLI tool is sometimes buggy when cloning content into a new space. You may see an error like:
+
+```
+FetchError: invalid json response body at https://cdn.builder.io/api/v2/admin reason: Unexpected token < in JSON at position 1
+```
+
+If you see this error or a similar one, keep executing the clone command until you get a success message:
+
+```
+Your new space "My repro space" public API Key: xxxxxxx
 ```
 
 2. Add your Builder space's public key to `NEXT_PUBLIC_BUILDER_API_KEY` in `.env`. Note: `.env` will be checked into source control, so [don't store any secrets there](https://nextjs.org/docs/basic-features/environment-variables).
