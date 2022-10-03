@@ -1,19 +1,23 @@
-import { NextSeo } from 'next-seo';
-import { BuilderComponent, builder } from '@builder.io/react';
-import { useRouter } from 'next/router';
-import { getBuilderModelPaths } from '../lib/get-builder-model-paths';
+import { NextSeo } from "next-seo";
+import { BuilderComponent, builder } from "@builder.io/react";
+import { useRouter } from "next/router";
+import { getBuilderModelPaths } from "../lib/get-builder-model-paths";
 import {
   resolveBuilderContent,
   CommonBuilderContentProps,
-} from '../lib/resolve-builder-content';
-import { Layout } from '../components/Layout';
+} from "../lib/resolve-builder-content";
+import { Layout } from "../components/Layout";
 
 export async function getStaticProps({ params }: { params: any }) {
   const builderContent = await resolveBuilderContent({
-    modelName: 'page',
+    modelName: "page",
     options: {
+      includeRefs: true,
+      options: {
+        noTraverse: false,
+      },
       userAttributes: {
-        urlPath: '/' + (params?.page?.join('/') || ''),
+        urlPath: "/" + (params?.page?.join("/") || ""),
       },
     },
   });
@@ -27,11 +31,11 @@ export async function getStaticProps({ params }: { params: any }) {
 }
 
 export async function getStaticPaths() {
-  const paths = await getBuilderModelPaths('page');
+  const paths = await getBuilderModelPaths("page");
 
   return {
     paths: paths.map((path) => ({
-      params: { page: path.split('/').filter((ps) => ps.length > 0) },
+      params: { page: path.split("/").filter((ps) => ps.length > 0) },
     })),
     fallback: true,
   };
@@ -53,7 +57,11 @@ export default function Page({
   return (
     <>
       <NextSeo title={page?.data.title} description={page?.data.description} />
-      <BuilderComponent model="page" content={page} />
+      <BuilderComponent
+        model="page"
+        content={page}
+        options={{ includeRefs: true, options: { noTraverse: false } }}
+      />
     </>
   );
 }
