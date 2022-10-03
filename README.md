@@ -15,9 +15,8 @@ For more details, see the _Project structure_ section below.
 
 ## Workflow
 
-- Determine where you want to host your back end.
+- Set up your development environment.
   - The back end can be spun up on any server you like. I recommend [forking this project on StackBlitz](https://stackblitz.com/edit/nextjs-cmpuwo) and running it within the browser. That way, you can easily share modifications to your back end with Builder's team.
-- Deploy the back end.
 - Clone Builder content to a new space within your organization.
 - Make any modifications to the Builder content in your space and/or the back end to demonstrate your bug.
 - Share your repro case, including links to your back end and your space, with Builder's team.
