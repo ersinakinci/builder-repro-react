@@ -22,7 +22,7 @@ builder create -k YOUR_BUILDER_ORG_PRIVATE_KEY -i ./builder-space -n "My repro s
 3. Create a private key within Builder for dynamic preview URLs (see below).
 4. For any models using `/__builder__/preview` or `/__builder__/preview-ssr` as a preview URL path, set up a dynamic preview URL with the following code. Replace `YOUR_PRIVATE_KEY`, `YOUR_BASE_URL`, and `YOUR_PATH` with the appropriate values from Builder and your development server:
 
-```
+```javascript
 const privateKey = YOUR_PRIVATE_KEY;
 const baseUrl = YOUR_BASE_URL;
 const path = YOUR_PATH; // "/__builder__/preview" or "/__builder__/preview-ssr", depending on what you want to repro
