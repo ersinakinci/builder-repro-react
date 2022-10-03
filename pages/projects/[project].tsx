@@ -64,7 +64,7 @@ export default function Page({
               <BuilderComponent
                 model="project-template"
                 content={projectTemplate}
-                data={data}
+                data={{ project: data }}
               />
             </>
           );
