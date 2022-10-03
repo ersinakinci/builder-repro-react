@@ -62,12 +62,18 @@ Once you've successfully created your new space, manually delete any partially-p
 6. For any models using `/__builder__/preview` or `/__builder__/preview-ssr` as a preview URL path (`project-template` and `symbol`), set up a dynamic preview URL with the following code. Replace `YOUR_PRIVATE_SPACE_KEY`, `YOUR_BASE_URL`, and `YOUR_PATH` with the appropriate values from Builder and your development server:
 
 ```javascript
+// Dynamic preview URL code for symbol and project-template models
+// Add this code to your model settings page.
+
 // NOTE: private write API key for your space, not your organization
 const privateKey = YOUR_PRIVATE_SPACE_KEY;
 const baseUrl = YOUR_BASE_URL;
 // "/__builder__/preview" or "/__builder__/preview-ssr", depending on what you want to repro
 const path = YOUR_PATH;
 
+// This admin API query fetches the model name for a given model ID.
+// We need the model name when fetching and rendering Builder content,
+// but the preview URL only has access to the model ID.
 const res = await fetch("https://cdn.builder.io/api/v2/admin", {
     method: 'POST',
     headers: {
@@ -82,6 +88,8 @@ const res = await fetch("https://cdn.builder.io/api/v2/admin", {
 const data = await res.json();
 const model = data.data.model.name;
 
+// The preview page will use the model name (and optionally the content
+// item ID) to render a preview of the content.
 return `${baseUrl}${path}?model=${model}&id=${content.id}`;
 ```
 
