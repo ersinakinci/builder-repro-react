@@ -30,7 +30,7 @@ For more details, see the _Project structure_ section below.
 ## Requirements
 
 - A Builder account
-- A private key [for your Builder organization](https://www.builder.io/c/docs/managing-organizations#:~:text=Add%20or%20change%20your%20private%20key) (note: this isn't the same thing as your space's public key, nor a space's private write API key)
+- A private key [for your Builder organization](https://www.builder.io/c/docs/managing-organizations#:~:text=Add%20or%20change%20your%20private%20key) (**NOTE**: this isn't the same thing as your space's public key, nor a space's private write API key)
 
 ## Detailed setup instructions
 
@@ -54,6 +54,8 @@ If you see this error or a similar one, keep executing the clone command until y
 ```
 Your new space "My repro space" public API Key: xxxxxxx
 ```
+
+Once you've successfully created your new space, manually delete any partially-populated spaces that may have been created.
 
 4. Add your new Builder space's public key to `NEXT_PUBLIC_BUILDER_API_KEY` in `.env`. **NOTE**: `.env` will be checked into source control, so [don't store any secrets there](https://nextjs.org/docs/basic-features/environment-variables).
 5. Create a private key for your new Builder space for dynamic preview URLs (see below). **NOTE**: this private key is not the same as your organization's private key which you used to clone the Builder content into your new space.
