@@ -34,11 +34,23 @@ This project assumes a particular space structure, detailed below.
 - `pages/__builder__/preview.tsx`: Preview route for displaying a single content item in the Visual Editor. Intended for section models like `symbol`. Doesn't fetch content from the content API, all rendering happens client-side. Requires dynamic preview URL setup within Builder (see below).
 - `pages/__builder__/preview-ssr.tsx`: Same as above, but also fetches content item data from Builder before rendering. Requires dynamic preview URL setup within Builder (see below).
 
+## Requirements
+
+- A Builder account
+- A private key [for your Builder organization](https://www.builder.io/c/docs/managing-organizations#:~:text=Add%20or%20change%20your%20private%20key) (note: this isn't the same thing as your space's public key, nor a space's private write API key)
+
 ## Setup
 
-1. Add your Builder space's public key to `NEXT_PUBLIC_BUILDER_API_KEY` in `.env`. Note: `.env` will be checked into source control, so [don't store any secrets there](https://nextjs.org/docs/basic-features/environment-variables).
-2. Create a private key within Builder for dynamic preview URLs (see below).
-3. For any models using `/__builder__/preview` or `/__builder__/preview-ssr` as a preview URL path, setup a dynamic preview URL with the following code. Replace `YOUR_PRIVATE_KEY`, `YOUR_BASE_URL`, and `YOUR_PATH` with the appropriate values from Builder and your development server:
+1. Clone the template's Builder space into a new space within your Builder organization using [Builder's CLI tool](https://github.com/BuilderIO/builder/tree/main/packages/cli):
+
+```
+npm install -g @builder.io/cli
+builder create -k YOUR_BUILDER_ORG_PRIVATE_KEY -i ./builder-space -n "My repro space"
+```
+
+2. Add your Builder space's public key to `NEXT_PUBLIC_BUILDER_API_KEY` in `.env`. Note: `.env` will be checked into source control, so [don't store any secrets there](https://nextjs.org/docs/basic-features/environment-variables).
+3. Create a private key within Builder for dynamic preview URLs (see below).
+4. For any models using `/__builder__/preview` or `/__builder__/preview-ssr` as a preview URL path, set up a dynamic preview URL with the following code. Replace `YOUR_PRIVATE_KEY`, `YOUR_BASE_URL`, and `YOUR_PATH` with the appropriate values from Builder and your development server:
 
 ```
 const privateKey = YOUR_PRIVATE_KEY;
