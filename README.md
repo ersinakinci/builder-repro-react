@@ -2,7 +2,7 @@
 
 This template is intended for quickly spinning up reproduction cases when you encounter a bug or some unexpected behavior while working with [Builder](https://builder.io/) and their [React SDK](https://github.com/builderio/builder/tree/main/packages/react).
 
-The idea is to use the template as a starting point and add modifications to demonstrate your specific bug. You can then share your modifications with Builder's team, the Builder community, or a BuildQuick expert to get help.
+The idea is to use the template as a starting point and add modifications to demonstrate your specific bug. You can then share your modifications with Builder's team, [the Builder community](https://forum.builder.io/), or [a BuildQuick expert](https://www.buildquick.dev/) to get help.
 
 ## Structure
 
