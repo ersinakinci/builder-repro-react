@@ -64,4 +64,4 @@ return `${baseUrl}${path}?model=${model}&id=${content.id}`;
 
 # Need Expert help with Builder?
 
-[Submit a project to BuildQuick](https://www.buildquick.dev/), and be matched with a Builder expert.
+[Submit a project to BuildQuick](https://www.buildquick.dev/) and be matched with a Builder expert.
