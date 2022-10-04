@@ -1,17 +1,19 @@
-import { GetServerSideProps } from 'next';
-import { BuilderComponent, builder } from '@builder.io/react';
+import { GetServerSideProps } from "next";
+import { BuilderComponent, builder } from "@builder.io/react";
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { model, id } = query;
   let builderContent;
 
   if (model && id) {
-    builderContent = builder.get(model as string, {
-      query: { id },
-      options: { noTargeting: true },
-    });
+    builderContent = await builder
+      .get(model as string, {
+        query: { id },
+        options: { noTargeting: true },
+      })
+      .toPromise();
   } else {
-    throw new Error('Missing model or id');
+    throw new Error("Missing model or id");
   }
 
   return {
